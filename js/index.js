@@ -40,3 +40,13 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const newNav = document.querySelectorAll ('nav a')
+newArray = Array.from(newNav)
+
+const navTexts = Object.values(siteContent.nav);
+navTexts.pop();
+
+newArray.forEach((link, index) => {
+  link.textContent = navTexts[index]
+});
